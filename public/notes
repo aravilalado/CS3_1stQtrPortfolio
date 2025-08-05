@@ -1,0 +1,14 @@
+<script>
+//javascript
+
+var x = 5; //for any pero "let" is the standard
+const PI = 3.14;// for a constant value, no restating, no numbers to start the variable
+alert (x + "100") //"page says __" pop up/dialogue box that captures the window
+document.write(x)
+
+
+2 ways to put variables + string in document write
+
+document.write("You will need " + totalRequired + " to last you until the ripe of age of " + maxAge);
+document.write(`You will need  ${totalRequired}  to last you until the ripe of age of ${maxAge}`);
+</script>
