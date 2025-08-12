@@ -7,8 +7,18 @@ alert (x + "100") //"page says __" pop up/dialogue box that captures the window
 document.write(x)
 
 
-2 ways to put variables + string in document write
+// 2 ways to put variables + string in document write
 
 document.write("You will need " + totalRequired + " to last you until the ripe of age of " + maxAge);
 document.write(`You will need  ${totalRequired}  to last you until the ripe of age of ${maxAge}`);
+
+//window.prompt("") will appear as a popup window wherein a user can put an input
+t let name = window.prompt("Enter the name of your fav person")
+t let sure = confirm('is ${name} really your fav person)
+
+If (!sure) {
+    
+}
+else {
+    console.log('love ya mwah')}
 </script>

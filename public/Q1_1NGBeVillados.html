@@ -1,8 +1,13 @@
 <script>
-    let age = 13;
-    let maxAge = 100;
-    let numPerDay = 2;
+    let age = window.prompt("tis whot your age?");
+    let sureage = confirm(`is ${age} really your age???`)
+    let maxAge = window.prompt(`how long would you live (hypothetically))`);
+    let suremaxAge = confirm(`is ${maxAge} really how long youll live pookie???`)
+    let numPerDay = window.prompt("how many packs of your favorite snack do you eat per day??");
+    let surenumPerDay = confirm(`is ${numPerDay} really how much your bigback eats?`);
     let totalRequired = (numPerDay * 365) * (maxAge - age);
-    document.write("You will need " + totalRequired + " to last you until the ripe of age of " + maxAge);
-
+    if (!sureage)(!suremaxAge)(!surenumPerDay){
+    console.log("need " + totalRequired + " to last you until the ripe of age of " + maxAge);
+}   
+    
 </script>
