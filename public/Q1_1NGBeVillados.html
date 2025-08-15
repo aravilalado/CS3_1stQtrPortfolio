@@ -1,30 +1,31 @@
 <html>
   <body>
     <h1> FEED ME BRO </h1>
-       Your Age: <input type="text" name="Age"><br> 
-       Your Max Age: <input type="text" name="Maxage"><br>
-      # of snacks <input type="text" name="Maxage"> 
+    <p>Plug in your age to see how much of your favorite snack would last u a lifetime</p>
+       Your Age: <input type="text" id="age"><br> 
+       Your Max Age: <input type="text" id="Maxage"><br>
+       # of snacks: <input type="text" id="numPerDay"> 
        <br><br> 
-       <p>Result:</p>
-        <input type="button" onclick="myFunction()" value="Accept Input <3">
+       <p id="Result">Result:</p>
+        <input type="button" id="confirm" onclick="getData()" value="Accept Input <3">
     
 
 
 
 <script>
-    //let age = window.prompt("tis whot your age?");
-    //let maxAge = window.prompt(`how long would you live (hypothetically)`);
-    //let numPerDay = window.prompt("how many packs of your favorite snack do you eat per day??");
-    //let sure = confirm("did you not lie to me pookie?") 
-
-
-    let totalRequired = (numPerDay * 365) * (maxAge - age);
-    if (!sure){
-    console.log("need " + totalRequired + " to last you until the ripe of age of " + maxAge);
-}   
-    else{
-        console.log("WHYYYYY")
+  function getData(){
+    let age= document.getElementById("age").value;
+    let Maxage= document.getElementById("Maxage").value;
+    let numPerDay= document.getElementById("numPerDay").value;
+    let sure = window.confirm("you sure these numbers are correct?");
+    if (sure) {
+        let totalRequired = (Number(numPerDay) * 365) * (Number(Maxage) - Number(age));
+        Result.innerHTML = "Result: You will need " + totalRequired + " to last you until the ripe of age of " + Maxage;
     }
+    else {
+        window.alert("click run again :<")
+    }
+  }
     
 </script>      
   </body>
