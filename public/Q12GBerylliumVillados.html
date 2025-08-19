@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Kristen Villados of 9Beryllium</h2>
+        Meal Price <input type="text" id="MealP"><br> 
+        Tip: <input type="text" id="tip"><br>
+        Service Charge: <input type="text" id="sc"> 
+        <br><br> 
+        <input type="button" id="confirm" onclick="totalMeal()" value="Accept Input">
+        <p id="tm">Total Meal:</p>
+
+    <script>
+        function totalMeal() {
+            let MealP= document.getElementById("MealP").value;
+            let tip= document.getElementById("tip").value;
+            let sc= document.getElementById("sc").value;
+            let total = Number(MealP) + Number(tip) + (Number(sc) / 100 * Number(MealP));
+            let datotal = total.toFixed(2)
+                tm.innerHTML = "Total Meal: " + datotal;
+            }
+    </script>
+</body>
+<footer>
+<h3>references</h3>
+   <p> W3Schools.com. (n.d.). https://www.w3schools.com/jsref/jsref_tofixed.asp</p>
+</footer>
+</html>
